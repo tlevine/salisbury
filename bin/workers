@@ -1,0 +1,20 @@
+#!/bin/sh
+set -e
+
+# Configure workers; each line has a user, box and worker script location
+WORKERS='
+tlevine@slave1.thomaslevine.com:$HOME/salisbury/worker/run.sh
+tlevine@slave2.thomaslevine.com:$HOME/salisbury/worker/run.sh
+'
+
+# Run workers
+echo Starting workers
+echo
+for worker in $WORKERS; do
+  box=$(echo "$worker"|cut -d: -f1)
+  run=$(echo "$worker"|cut -d: -f2)
+  ssh "$box" "echo '$box' && \"$run\"" &
+done
+wait
+echo
+echo The end.
