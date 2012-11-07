@@ -4,12 +4,24 @@ Salisbury
 Salisbury sets up [mincemeat](https://github.com/michaelfairley/mincemeatpy)
 workers and a mincemeat server.
 
-Set up a worker by running `dependencies.sh` as root and `run.sh` as the user.
+## Install
 
-Then run a mincemeat program on the server with the password that `run.sh`
-tells you. You can install mincemeat on the server like so.
+### Master
+Install mincemeat.
 
-    git submodule init
-    git submodule update
+    pip install mincemeat
 
-Then mincemeat will be in `mincemeat.py`.
+### Worker
+Set up a worker by running `dependencies-user.sh` as the user on the worker.
+
+## Run
+You must start the master before the workers.
+
+### Master
+Run your mincemeat program. For example,
+
+    ./example.py
+
+### Worker
+As the user, activate and run `run.sh`. This will start as many processes
+as you have cores.
