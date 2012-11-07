@@ -24,6 +24,7 @@ else
   # virtualenv
   virtualenv -p python2.7 "$HOME/env"
   source "$HOME/env/bin/activate"
+  echo 'source "$HOME/env/bin/activate"' >> "$HOME/.bashrc"
 
 # python3 --version| grep 3.3.0 || pythonz install 3.3.0
 # virtualenv -p "$HOME/.pythonz/pythons/CPython-3.3.0/bin/python3.3" python3.3.0
