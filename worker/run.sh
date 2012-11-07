@@ -6,7 +6,3 @@ server_address='box.scraperwiki.com'
 
 # Run
 python -m mincemeat -p "$password" "$server_address" 
-
-# Report
-echo The worker is running. It is watching the server at \""$server_address"\"
-echo with the password \""$password"\".
