@@ -22,13 +22,16 @@ Run your mincemeat program. For example,
 
     ./example.py
 
-### Worker
+### Several processes on one worker
 As the user, activate and run `run.sh`. This will start as many processes
 as you have cores.
 
-The spawning of multiple processes is not yet implemented. Here are ideas on
-that.
+### Several processes on several workers
+Adjust `bin/workers` for your configuration, then activate and run `workers`.
+This will ssh to all of the worker systems and run `run.sh`.
 
+## References
+Spawning multiple processes in shell
 * http://kochanski.org/blog/?p=326
 * http://elonen.iki.fi/code/misc-notes/core-split/index.html
 * http://prll.sourceforge.net/shell_parallel.html
