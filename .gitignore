@@ -1,4 +1,7 @@
 ## Home directory
+.bashrc
+.pythonz
+env
 .ipython
 .bash_history
 .cache
