@@ -1,0 +1,2 @@
+OLD_EDITOR="$EDITOR"
+export EDITOR=vim
